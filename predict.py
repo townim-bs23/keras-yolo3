@@ -10,6 +10,12 @@ from keras.models import load_model
 from tqdm import tqdm
 import numpy as np
 
+"""
+If you wish to change the object threshold or IOU threshold, 
+you can do it by altering obj_thresh and nms_thresh variables. 
+By default, they are set to 0.5 and 0.45 respectively.
+"""
+
 def _main_(args):
     config_path  = args.conf
     input_path   = args.input
@@ -115,7 +121,7 @@ def _main_(args):
 
             # predict the bounding boxes
             boxes = get_yolo_boxes(infer_model, [image], net_h, net_w, config['model']['anchors'], obj_thresh, nms_thresh)[0]
-
+            # print(boxes)
             # draw bounding boxes on the image using labels
             draw_boxes(image, boxes, config['model']['labels'], obj_thresh) 
      
