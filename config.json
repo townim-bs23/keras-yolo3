@@ -2,13 +2,13 @@
     "model" : {
         "min_input_size":       460,
         "max_input_size":       770,
-        "anchors":              [17,16, 18,17, 29,16, 32,19, 37,20, 54,21, 55,18, 57,26, 58,22],
-        "labels":               ["dob", "fathers_name", "mothers_name", "name", "name_in_bengali", "nid_no"]
+        "anchors":              [17,15, 30,17, 37,25, 50,70, 53,19, 86,27, 234,69, 350,43, 367,82],
+        "labels":               ["address","dob","fathers_name","mothers_name","mrz","name","name_in_bengali","nid","nid_no","smart"]
     },
 
     "train": {
-        "train_image_folder":   "dataset/NID_bbox/images/",
-        "train_annot_folder":   "dataset/NID_bbox/annotation_voc/",
+        "train_image_folder":   "dataset/NID_bbox/images_all/",
+        "train_annot_folder":   "dataset/NID_bbox/annotations_all/",
         "cache_name":           "nid.pkl",
         "pretrained_weights":   "nid.h5", 
         "train_times":          10,

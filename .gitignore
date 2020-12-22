@@ -4,6 +4,8 @@
 *.h5
 *.pyc
 *.xml
+*.pkl
 *.mp4
 *.DS_Store
 *.bak
+dataset/

@@ -25,7 +25,6 @@ By default, they are set to 0.5 and 0.45 respectively.
 # The training process stops when the loss on the validation set is not improved in 3 consecutive epoches.
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-# "labels":               ["dob", "name", "name_in_bengali", "nid_no"]
 
 config = tf.compat.v1.ConfigProto(
     gpu_options = tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=0.93)
